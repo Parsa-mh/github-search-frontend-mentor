@@ -1,0 +1,53 @@
+$color : #141c2f;
+$card-color : #1f2a48;
+$color-info : #056bdf;
+@font-face {
+    font-family: font-most;
+    src: url(./font/static/RobotoMono-Regular.ttf);
+}
+*{
+    color: #ffff;
+}
+body {
+    background-color: $color !important;
+    .header{
+        margin-top: 120px;
+        .header-part1{
+            .button{
+                background-color: $color;
+                border: none;
+                font-family: font-most;
+                font-size: 1.2rem;
+            }
+        }
+        .header-part2{
+            background-color: $card-color;
+            border-radius: 12px;
+            padding: 15px;
+            .input-search{
+                background-color: $card-color;
+                border: 0.8px solid $card-color;
+                transition: 0.2s;
+                width: 100%;
+                padding-top: 7px;
+                padding-bottom: 7px;
+                &::placeholder{
+                    font-family: font-most;
+                    color: #ffffff8d;
+                }
+                &:focus{
+                    border: 0.8px solid $color-info;
+                    outline: none;
+                    border-radius: 10px;
+                }
+            }
+            button{
+                font-family: font-most;
+            }
+        }
+    }
+    main{
+        
+    }
+    
+}

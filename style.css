@@ -1,3 +1,49 @@
+@font-face {
+  font-family: font-most;
+  src: url(./font/static/RobotoMono-Regular.ttf);
+}
+* {
+  color: white;
+}
+
 body {
+  background-color: #141c2f !important;
+}
+body .header {
+  margin-top: 120px;
+}
+body .header .header-part1 .button {
   background-color: #141c2f;
+  border: none;
+  font-family: font-most;
+  font-size: 1.2rem;
+}
+body .header .header-part2 {
+  background-color: #1f2a48;
+  border-radius: 12px;
+  padding: 15px;
+}
+body .header .header-part2 .input-search {
+  background-color: #1f2a48;
+  border: 0.8px solid #1f2a48;
+  transition: 0.2s;
+  width: 100%;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+body .header .header-part2 .input-search::-moz-placeholder {
+  font-family: font-most;
+  color: rgba(255, 255, 255, 0.5529411765);
+}
+body .header .header-part2 .input-search::placeholder {
+  font-family: font-most;
+  color: rgba(255, 255, 255, 0.5529411765);
+}
+body .header .header-part2 .input-search:focus {
+  border: 0.8px solid #056bdf;
+  outline: none;
+  border-radius: 10px;
+}
+body .header .header-part2 button {
+  font-family: font-most;
 }/*# sourceMappingURL=style.css.map */
