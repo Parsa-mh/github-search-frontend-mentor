@@ -1,10 +1,10 @@
 @font-face {
   font-family: font-most;
-  src: url(./font/static/RobotoMono-Regular.ttf);
+  src: url(./fonts/RobotoMono-Regular.ttf);
 }
 @font-face {
   font-family: userName;
-  src: url(./font/Playfair_Display/static/PlayfairDisplay-Regular.ttf);
+  src: url(./fonts/PlayfairDisplay-Regular.ttf);
 }
 p, h2 {
   margin: 0 !important;
@@ -61,20 +61,16 @@ body main .box {
   border-radius: 12px;
 }
 body main .box .Profile-info .img img {
-  width: 200px;
-  height: 200px;
+  width: 135px;
+  height: 135px;
   border-radius: 50%;
 }
-body main .box .Profile-info .userName-Id .userName {
-  font-family: userName;
-}
 body main .box .Profile-info .userName-Id .userName h2 {
+  font-family: userName;
   font-size: 2.3rem;
 }
-body main .box .Profile-info .userName-Id .ID {
-  font-family: font-most;
-}
 body main .box .Profile-info .userName-Id .ID p {
+  font-family: font-most;
   color: #056bdf;
   font-size: 1.3rem;
 }
@@ -103,4 +99,14 @@ body main .connections .connection-item {
 }
 body main .connections .connection-item .connection-text {
   font-family: font-most;
+}
+
+@media only screen and (max-width: 600px) {
+  body main .table {
+    width: 100%;
+  }
+  body main .box .Profile-info .img img {
+    width: 100px;
+    height: 100px;
+  }
 }/*# sourceMappingURL=style.css.map */

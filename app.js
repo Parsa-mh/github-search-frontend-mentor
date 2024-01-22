@@ -6,27 +6,72 @@ const ID = document.querySelector("#ID")
 const joinTime = document.querySelector("#joined-time")
 const bio = document.querySelector("#biography")
 const follow = document.querySelectorAll(".acc-info")
-const location = document.querySelector("#location")
+const locations = document.querySelector("#location")
 const link = document.querySelector("#link")
 const twitter = document.querySelector("#twitter")
 const company = document.querySelector("#company")
-let array = []
-function findUser(){
-    const url = `https://api.github.com/users/parsa-mh`
-    axios.get(url).then((res)=>{
-        res.data.forEach((item) => {
-            array.push(item)
-        });
+let array 
+async function findUser(event){
+    event.preventDefault()
+    const url = `https://api.github.com/users/${searchInput.value}`
+    await axios.get(url).then((res)=>{
+        array = res.data
+        console.log(res);
+        info()
     }).catch((err)=>{
+        console.log(err);
         swal.fire({
             title : "user not found",
             icon : "error",
-            text : `error code ${err.data.response.status}`
+            text : `error code ${err.response.status}`
         })
     })
 }
-function Userinfo(){
-    
+function info(){
+    searchInput.value = ""
+    informations.classList.remove("d-none")
+    image.setAttribute("src",array.avatar_url)
+    if (array.name == "" || array.name === null){
+        userName.textContent = "Not Available"
+        userName.classList.add("text-secondary")
+    }else{
+        userName.textContent = array.name
+    }
+    ID.textContent = "@"+array.login
+    joinTime .textContent = "joined " + array.created_at
+    if (array.bio == "" || array.bio === null){
+        bio.textContent = "this profile has no bio"
+        bio.classList.add("text-secondary")
+    }else{
+        bio.textContent = array.bio
+    }
+    follow[0].textContent = array.public_repos
+    follow[1].textContent = array.followers
+    follow[2].textContent = array.following
+    if(array.location == "" || array.location === null){
+        locations.textContent = "Not Available"
+        locations.classList.add("text-secondary")
+    }else{
+        locations.textContent = array.location
+    }
+    if(array.blog == "" || array.blog === null){
+        link.textContent = "Not Available"
+        link.classList.add("text-secondary")
+    }else{
+        link.textContent = array.blog
+    }
+    if(array.twitter_username == "" || array.twitter_username === null){
+        twitter.textContent = "Not Available"
+        twitter.classList.add("text-secondary")
+    }else{
+        twitter.textContent = array.twitter_username
+    }
+    if(array.company == "" || array.company === null){
+        company.textContent = "Not Available"
+        company.classList.add("text-secondary")
+    }else{
+        company.textContent = array.company
+    }
 }
 
 
@@ -44,10 +89,11 @@ function Userinfo(){
 
 
 
-axios.get(url)
-.then((res)=>{
-    console.log(res);
-})
-.catch((res)=>{
-    console.log(res.response.status);
-})
+
+// axios.get(url)
+// .then((res)=>{
+//     console.log(res);
+// })
+// .catch((res)=>{
+//     console.log(res.response.status);
+// })

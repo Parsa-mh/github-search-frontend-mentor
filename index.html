@@ -21,30 +21,32 @@
         </div>
         <!-- upper side of header end -->
         <!-- down side of header start -->
-        <div class="header-part2 d-flex flex-row align-items-center gap-2">
-            <!-- search icon -->
-            <div>
-                <label for="search">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#056bdf" class="bi bi-search" viewBox="0 0 16 16">
-                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                  </svg>
-                </label>
-            </div>
-            <!-- input search -->
-            <div class="flex-grow-1">
-                <input id="search" type="text" placeholder="Search Github username..." class="input-search">
-            </div>
-            <!-- btn search -->
-            <div>
-                <button class="btn btn-primary" onclick="findUser()">Search</button>
-            </div>
+        <div>
+           <form onsubmit="findUser(event)" class="header-part2 d-flex flex-row align-items-center gap-2 w-100">
+                <!-- search icon -->
+                <div>
+                    <label for="search">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#056bdf" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                    </svg>
+                    </label>
+                </div>
+                <!-- input search -->
+                <div class="flex-grow-1">
+                    <input id="search" type="text" placeholder="Search Github username..." class="input-search">
+                </div>
+                <!-- btn search -->
+                <div>
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </div>
+           </form>
         </div>
         <!-- down side of header end -->
     </header>
     <!-- header end -->
     <!-- main start -->
     <main class="container">
-        <div class="box">
+        <div class="box d-none">
             <div class="Profile-info d-flex flex-row justify-content-between flex-wrap">
                 <div class="image-id flex-grow-1 d-flex flex-row">
                     <div class="img me-4">
@@ -69,15 +71,15 @@
             <div class="table d-flex flex-row justify-content-around mt-4 mx-auto p-3">
                 <div class="d-flex flex-column">
                     <h6 class="mb-2 text-center">Repos</h6>
-                    <h3 class="acc-info">5473</h3>
+                    <h3 class="acc-info text-center">5473</h3>
                 </div>
                 <div class="d-flex flex-column">
                     <h6 class="mb-2 text-center">Followers</h6>
-                    <h3 class="acc-info">324235</h3>
+                    <h3 class="acc-info text-center">324235</h3>
                 </div>
                 <div class="d-flex flex-column">
                     <h6 class="mb-2 text-center">Following</h6>
-                    <h3 class="acc-info">234235</h3>
+                    <h3 class="acc-info text-center">234235</h3>
                 </div>
             </div>
             <div class="connections mx-auto d-flex flex-row justify-content-between flex-wrap">
