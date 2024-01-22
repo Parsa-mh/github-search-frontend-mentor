@@ -1,9 +1,17 @@
 $color : #141c2f;
 $card-color : #1f2a48;
 $color-info : #056bdf;
+$box-border : 12px;
 @font-face {
     font-family: font-most;
     src: url(./font/static/RobotoMono-Regular.ttf);
+}
+@font-face {
+    font-family: userName;
+    src: url(./font/Playfair_Display/static/PlayfairDisplay-Regular.ttf);
+}
+p,h2{
+    margin: 0 !important;
 }
 *{
     color: #ffff;
@@ -11,7 +19,7 @@ $color-info : #056bdf;
 body {
     background-color: $color !important;
     .header{
-        margin-top: 120px;
+        margin-top: 50px;
         .header-part1{
             .button{
                 background-color: $color;
@@ -22,7 +30,7 @@ body {
         }
         .header-part2{
             background-color: $card-color;
-            border-radius: 12px;
+            border-radius: $box-border;
             padding: 15px;
             .input-search{
                 background-color: $card-color;
@@ -47,7 +55,63 @@ body {
         }
     }
     main{
-        
+        .box{
+            padding: 35px;
+            background-color: $card-color;
+            border-radius: $box-border;
+            .Profile-info{
+                .img{
+                    img{
+                        width: 200px;
+                        height: 200px;
+                        border-radius: 50%;
+                        
+                    }
+                }
+                .userName-Id{
+                    .userName{
+                        font-family: userName;
+                        h2{
+                            font-size: 2.3rem;
+                        }
+                    }
+                    .ID{
+                        font-family: font-most;
+                        p{
+                            color: $color-info;
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+                .time-joined{
+                    margin-top: 16px;
+                }
+            }
+        }
+        .bio {
+            p{
+                font-family: font-most;
+            }
+        }
+        .table{
+            background-color: $color;
+            border-radius: $box-border;
+            width: 89%;
+            h6{
+                font-family: userName;
+            }
+            h3{
+                font-family: font-most;
+            }
+        }
+        .connections{
+            width: 89%;
+            .connection-item{
+                 min-width: 170px;
+                 .connection-text{
+                    font-family: font-most;
+                 }
+            }
+        }
     }
-    
 }

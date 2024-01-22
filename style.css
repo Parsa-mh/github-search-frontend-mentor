@@ -2,6 +2,14 @@
   font-family: font-most;
   src: url(./font/static/RobotoMono-Regular.ttf);
 }
+@font-face {
+  font-family: userName;
+  src: url(./font/Playfair_Display/static/PlayfairDisplay-Regular.ttf);
+}
+p, h2 {
+  margin: 0 !important;
+}
+
 * {
   color: white;
 }
@@ -10,7 +18,7 @@ body {
   background-color: #141c2f !important;
 }
 body .header {
-  margin-top: 120px;
+  margin-top: 50px;
 }
 body .header .header-part1 .button {
   background-color: #141c2f;
@@ -45,5 +53,54 @@ body .header .header-part2 .input-search:focus {
   border-radius: 10px;
 }
 body .header .header-part2 button {
+  font-family: font-most;
+}
+body main .box {
+  padding: 35px;
+  background-color: #1f2a48;
+  border-radius: 12px;
+}
+body main .box .Profile-info .img img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+body main .box .Profile-info .userName-Id .userName {
+  font-family: userName;
+}
+body main .box .Profile-info .userName-Id .userName h2 {
+  font-size: 2.3rem;
+}
+body main .box .Profile-info .userName-Id .ID {
+  font-family: font-most;
+}
+body main .box .Profile-info .userName-Id .ID p {
+  color: #056bdf;
+  font-size: 1.3rem;
+}
+body main .box .Profile-info .time-joined {
+  margin-top: 16px;
+}
+body main .bio p {
+  font-family: font-most;
+}
+body main .table {
+  background-color: #141c2f;
+  border-radius: 12px;
+  width: 89%;
+}
+body main .table h6 {
+  font-family: userName;
+}
+body main .table h3 {
+  font-family: font-most;
+}
+body main .connections {
+  width: 89%;
+}
+body main .connections .connection-item {
+  min-width: 170px;
+}
+body main .connections .connection-item .connection-text {
   font-family: font-most;
 }/*# sourceMappingURL=style.css.map */
