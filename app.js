@@ -17,7 +17,6 @@ async function findUser(event){
     await axios.get(url).then((res)=>{
         array = res.data
         console.log(res);
-        info()
     }).catch((err)=>{
         console.log(err);
         swal.fire({
@@ -26,8 +25,6 @@ async function findUser(event){
             text : `error code ${err.response.status}`
         })
     })
-}
-function info(){
     searchInput.value = ""
     informations.classList.remove("d-none")
     image.setAttribute("src",array.avatar_url)
@@ -36,14 +33,17 @@ function info(){
         userName.classList.add("text-secondary")
     }else{
         userName.textContent = array.name
+        userName.classList.remove("text-secondary")
     }
     ID.textContent = "@"+array.login
+    ID.setAttribute("href",array.html_url)
     joinTime .textContent = "joined " + array.created_at
     if (array.bio == "" || array.bio === null){
         bio.textContent = "this profile has no bio"
         bio.classList.add("text-secondary")
     }else{
         bio.textContent = array.bio
+        bio.classList.remove("text-secondary")
     }
     follow[0].textContent = array.public_repos
     follow[1].textContent = array.followers
@@ -53,47 +53,27 @@ function info(){
         locations.classList.add("text-secondary")
     }else{
         locations.textContent = array.location
+        locations.classList.remove("text-secondary")
     }
     if(array.blog == "" || array.blog === null){
         link.textContent = "Not Available"
         link.classList.add("text-secondary")
     }else{
         link.textContent = array.blog
+        link.classList.remove("text-secondary")
     }
     if(array.twitter_username == "" || array.twitter_username === null){
         twitter.textContent = "Not Available"
         twitter.classList.add("text-secondary")
     }else{
         twitter.textContent = array.twitter_username
+        twitter.classList.remove("text-secondary")
     }
     if(array.company == "" || array.company === null){
         company.textContent = "Not Available"
         company.classList.add("text-secondary")
     }else{
         company.textContent = array.company
+        company.classList.remove("text-secondary")
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// axios.get(url)
-// .then((res)=>{
-//     console.log(res);
-// })
-// .catch((res)=>{
-//     console.log(res.response.status);
-// })

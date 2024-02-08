@@ -69,7 +69,7 @@ body main .box .Profile-info .userName-Id .userName h2 {
   font-family: userName;
   font-size: 2.3rem;
 }
-body main .box .Profile-info .userName-Id .ID p {
+body main .box .Profile-info .userName-Id .ID a {
   font-family: font-most;
   color: #056bdf;
   font-size: 1.3rem;
