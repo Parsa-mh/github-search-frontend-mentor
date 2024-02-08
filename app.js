@@ -16,7 +16,7 @@ async function findUser(event){
     const url = `https://api.github.com/users/${searchInput.value}`
     await axios.get(url).then((res)=>{
         array = res.data
-        console.log(res);
+        informations.classList.remove("d-none")
     }).catch((err)=>{
         console.log(err);
         swal.fire({
@@ -26,7 +26,6 @@ async function findUser(event){
         })
     })
     searchInput.value = ""
-    informations.classList.remove("d-none")
     image.setAttribute("src",array.avatar_url)
     if (array.name == "" || array.name === null){
         userName.textContent = "Not Available"
