@@ -16,6 +16,42 @@ p,h2{
 *{
     color: #ffff;
 }
+.light-mode{
+    background-color: #f6f8ff !important;
+    *{
+        color: #2B3442;
+    }
+    .header{
+        .header-part1{
+            .button{
+                background-color: #f6f8ff !important;
+            }
+        }
+        .header-part2{
+            background-color: #fefefe !important;
+            box-shadow: 0 9px 25px -9px rgb(0 0 0 / 20%);
+            .input-search{
+                background-color: #fefefe !important;
+                border: 0.8px solid #fefefe !important;
+                &::placeholder{
+                    color: #1f2a48;
+                }
+                &:focus{
+                    border: 0.8px solid $color-info !important;
+                }
+            }
+        }
+    }
+    main{
+        .box{
+            box-shadow: 0 9px 25px -9px rgb(0 0 0 / 20%);
+            background-color: #fefefe !important;
+        }
+        .table{
+            background-color: #f6f8ff !important;
+        }
+    }
+}
 body {
     background-color: $color !important;
     .header{
@@ -39,6 +75,7 @@ body {
                 width: 100%;
                 padding-top: 7px;
                 padding-bottom: 7px;
+                border-radius: 10px;
                 &::placeholder{
                     font-family: font-most;
                     color: #ffffff8d;
@@ -46,7 +83,6 @@ body {
                 &:focus{
                     border: 0.8px solid $color-info;
                     outline: none;
-                    border-radius: 10px;
                 }
             }
             button{
@@ -80,6 +116,10 @@ body {
                             font-family: font-most;
                             color: $color-info;
                             font-size: 1.3rem;
+                            text-decoration: none;
+                            &:hover{
+                                text-decoration: underline;
+                            }
                         }
                     }
                 }

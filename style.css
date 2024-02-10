@@ -14,6 +14,40 @@ p, h2 {
   color: white;
 }
 
+.light-mode {
+  background-color: #f6f8ff !important;
+}
+.light-mode * {
+  color: #2B3442;
+}
+.light-mode .header .header-part1 .button {
+  background-color: #f6f8ff !important;
+}
+.light-mode .header .header-part2 {
+  background-color: #fefefe !important;
+  box-shadow: 0 9px 25px -9px rgba(0, 0, 0, 0.2);
+}
+.light-mode .header .header-part2 .input-search {
+  background-color: #fefefe !important;
+  border: 0.8px solid #fefefe !important;
+}
+.light-mode .header .header-part2 .input-search::-moz-placeholder {
+  color: #1f2a48;
+}
+.light-mode .header .header-part2 .input-search::placeholder {
+  color: #1f2a48;
+}
+.light-mode .header .header-part2 .input-search:focus {
+  border: 0.8px solid #056bdf !important;
+}
+.light-mode main .box {
+  box-shadow: 0 9px 25px -9px rgba(0, 0, 0, 0.2);
+  background-color: #fefefe !important;
+}
+.light-mode main .table {
+  background-color: #f6f8ff !important;
+}
+
 body {
   background-color: #141c2f !important;
 }
@@ -38,6 +72,7 @@ body .header .header-part2 .input-search {
   width: 100%;
   padding-top: 7px;
   padding-bottom: 7px;
+  border-radius: 10px;
 }
 body .header .header-part2 .input-search::-moz-placeholder {
   font-family: font-most;
@@ -50,7 +85,6 @@ body .header .header-part2 .input-search::placeholder {
 body .header .header-part2 .input-search:focus {
   border: 0.8px solid #056bdf;
   outline: none;
-  border-radius: 10px;
 }
 body .header .header-part2 button {
   font-family: font-most;
@@ -73,6 +107,10 @@ body main .box .Profile-info .userName-Id .ID a {
   font-family: font-most;
   color: #056bdf;
   font-size: 1.3rem;
+  text-decoration: none;
+}
+body main .box .Profile-info .userName-Id .ID a:hover {
+  text-decoration: underline;
 }
 body main .box .Profile-info .time-joined {
   margin-top: 16px;
